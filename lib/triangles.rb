@@ -11,10 +11,14 @@ class Triangle
   end
 
   def equilateral?
-    @side_a.==(@side_b) && @side_b.==(@side_c)
+    triangle? && @side_a.==(@side_b) && @side_b.==(@side_c)
   end
 
   def isosceles?
     equilateral? == false && (@side_a == @side_b || @side_b == @side_c || @side_a == @side_c)
+  end
+
+  def scalene?
+    isosceles? == false
   end
 end

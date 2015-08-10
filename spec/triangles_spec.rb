@@ -32,5 +32,15 @@ describe(Triangle) do
       new_triangle = Triangle.new(3, 5, 5)
       expect(new_triangle.isosceles?()).to(eq(true))
     end
+
+    it('returns true for scalene? if no sides are equal') do
+      new_triangle = Triangle.new(3, 5, 4)
+      expect(new_triangle.scalene?()).to(eq(true))
+    end
+
+    it('returns false for scalene? if any sides are equal') do
+      new_triangle = Triangle.new(3, 5, 5)
+      expect(new_triangle.scalene?()).to(eq(false))
+    end
   end
 end
