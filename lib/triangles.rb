@@ -44,11 +44,7 @@ class Triangle
   end
 
   def width_1
-<<<<<<< HEAD
     @side_c - (Math.sqrt((@side_a ** 2) - (height ** 2)))
-=======
-    @side_c - (self.sqrt((@side_a * @side_a) - (height * height)))
->>>>>>> draw_triangle
   end
 
   def width_2
