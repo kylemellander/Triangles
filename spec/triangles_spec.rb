@@ -3,6 +3,7 @@ require('rspec')
 
 describe(Triangle) do
   describe('#triangle?') do
+
     it('returns true if sides make a triangle') do
       new_triangle = Triangle.new(3, 3, 3)
       expect(new_triangle.triangle?()).to(eq(true))
@@ -40,6 +41,11 @@ describe(Triangle) do
 
     it('returns false for scalene? if any sides are equal') do
       new_triangle = Triangle.new(3, 5, 5)
+      expect(new_triangle.scalene?()).to(eq(false))
+    end
+
+    it('returns false if sides do not make a triangle') do
+      new_triangle = Triangle.new(1, 2, 4)
       expect(new_triangle.scalene?()).to(eq(false))
     end
   end

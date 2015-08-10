@@ -15,16 +15,16 @@ class Triangle
   end
 
   def isosceles?
-    equilateral? == false && (@side_a == @side_b || @side_b == @side_c || @side_a == @side_c)
+    triangle? && equilateral? == false && (@side_a == @side_b || @side_b == @side_c || @side_a == @side_c)
   end
 
   def scalene?
-    isosceles? == false
+    triangle? && isosceles? == false
   end
 
   def area
     s = (@side_a + @side_b + @side_c) / 2
-    sqrt(s * (s - @side_a) * (s - @side_b) * (s - @side c)
+    sqrt(s * (s - @side_a) * (s - @side_b) * (s - @side_c))
   end
 
   def height
@@ -32,7 +32,7 @@ class Triangle
   end
 
   def width_1
-    @side_c - (sqrt((@side_a ^ 2) - (height() ^ 2))
+    @side_c - (sqrt((@side_a ^ 2) - (height ^ 2)))
   end
 
   def width_2
