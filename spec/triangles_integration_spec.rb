@@ -35,6 +35,6 @@ describe("triangle path", {:type => :feature}) do
     fill_in('side_b', :with => "200")
     fill_in('side_c', :with => "300")
     click_button('Submit')
-    expect(page).to have_css('triangle')
+    expect(page).to have_css('.triangle')
   end
 end
