@@ -1,9 +1,9 @@
 class Triangle
   def initialize(side_a, side_b, side_c)
     triangle = [side_a, side_b, side_c].sort_by(&:to_i)
-    @side_a = triangle[0]
-    @side_b = triangle[1]
-    @side_c = triangle[2]
+    @side_a = triangle[0].to_i
+    @side_b = triangle[1].to_i
+    @side_c = triangle[2].to_i
   end
 
   def triangle?
@@ -44,7 +44,11 @@ class Triangle
   end
 
   def width_1
+<<<<<<< HEAD
     @side_c - (Math.sqrt((@side_a ** 2) - (height ** 2)))
+=======
+    @side_c - (self.sqrt((@side_a * @side_a) - (height * height)))
+>>>>>>> draw_triangle
   end
 
   def width_2

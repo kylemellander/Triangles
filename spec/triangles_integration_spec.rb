@@ -28,4 +28,13 @@ describe("triangle path", {:type => :feature}) do
     expect(page).to have_content('Side B: 5')
     expect(page).to have_content('Side C: 5')
   end
+
+  it('successfully draws a triangle on results') do
+    visit('/')
+    fill_in('side_a', :with => "100")
+    fill_in('side_b', :with => "200")
+    fill_in('side_c', :with => "300")
+    click_button('Submit')
+    expect(page).to have_css('triangle')
+  end
 end
