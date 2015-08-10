@@ -53,5 +53,25 @@ describe(Triangle) do
       new_triangle = Triangle.new(1, 4, 4)
       expect(new_triangle.triangle_type()).to(eq("This is an isosceles triangle."))
     end
+
+    it('returns area of triangle') do
+      new_triangle = Triangle.new(100, 400, 400)
+      expect(new_triangle.area()).to(eq(19843.13483298443))
+    end
+
+    it('returns height of triangle') do
+      new_triangle = Triangle.new(100, 400, 400)
+      expect(new_triangle.height()).to(eq(99.21567416492215))
+    end
+
+    it('returns width_1 of triangle') do
+      new_triangle = Triangle.new(100, 400, 400)
+      expect(new_triangle.width_1()).to(eq(387.5))
+    end
+
+    it('returns width_2 of triangle') do
+      new_triangle = Triangle.new(100, 400, 400)
+      expect(new_triangle.width_2()).to(eq(12.5))
+    end
   end
 end

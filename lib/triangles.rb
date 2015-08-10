@@ -34,20 +34,20 @@ class Triangle
     end
   end
 
-  # def area
-  #   s = (@side_a + @side_b + @side_c) / 2
-  #   sqrt(s * (s - @side_a) * (s - @side_b) * (s - @side_c))
-  # end
-  #
-  # def height
-  #   2 * area() / @side_c
-  # end
-  #
-  # def width_1
-  #   @side_c - (sqrt((@side_a ^ 2) - (height ^ 2)))
-  # end
-  #
-  # def width_2
-  #   @side_c - width_1
-  # end
+  def area
+    s = (@side_a + @side_b + @side_c) / 2
+    Math.sqrt(s * (s - @side_a) * (s - @side_b) * (s - @side_c))
+  end
+
+  def height
+    2 * area() / @side_c
+  end
+
+  def width_1
+    @side_c - (Math.sqrt((@side_a ** 2) - (height ** 2)))
+  end
+
+  def width_2
+    @side_c - width_1
+  end
 end
