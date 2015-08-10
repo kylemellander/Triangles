@@ -9,4 +9,8 @@ class Triangle
   def triangle?
     (@side_a + @side_b) > @side_c
   end
+
+  def equilateral?
+    @side_a.==(@side_b) && @side_b.==(@side_c)
+  end
 end
