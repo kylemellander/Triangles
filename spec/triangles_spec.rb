@@ -48,5 +48,10 @@ describe(Triangle) do
       new_triangle = Triangle.new(1, 2, 4)
       expect(new_triangle.scalene?()).to(eq(false))
     end
+
+    it('returns type of triangle from triangle_type method') do
+      new_triangle = Triangle.new(1, 4, 4)
+      expect(new_triangle.triangle_type()).to(eq("This is an isosceles triangle."))
+    end
   end
 end

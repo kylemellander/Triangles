@@ -22,6 +22,18 @@ class Triangle
     triangle? && isosceles? == false
   end
 
+  def triangle_type
+    if equilateral?
+      "This is an equilateral triangle."
+    elsif isosceles?
+      "This is an isosceles triangle."
+    elsif scalene?
+      "This is a scalene triangle."
+    else
+      "This is not a triangle!"
+    end
+  end
+
   def area
     s = (@side_a + @side_b + @side_c) / 2
     sqrt(s * (s - @side_a) * (s - @side_b) * (s - @side_c))
