@@ -18,4 +18,14 @@ describe("triangle path", {:type => :feature}) do
     expect(page).to have_content('This is an equilateral triangle.')
   end
 
+  it('successfully displays the length of the sides') do
+    visit('/')
+    fill_in('side_a', :with => "4")
+    fill_in('side_b', :with => "5")
+    fill_in('side_c', :with => "5")
+    click_button('Submit')
+    expect(page).to have_content('Side A: 4')
+    expect(page).to have_content('Side B: 5')
+    expect(page).to have_content('Side C: 5')
+  end
 end
