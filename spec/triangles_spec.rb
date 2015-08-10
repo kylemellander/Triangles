@@ -30,7 +30,7 @@ describe(Triangle) do
     end
 
     it('returns true for isosceles? if at least 2 sides are equal') do
-      new_triangle = Triangle.new(3, 5, 5)
+      new_triangle = Triangle.new(1, 4, 4)
       expect(new_triangle.isosceles?()).to(eq(true))
     end
 
